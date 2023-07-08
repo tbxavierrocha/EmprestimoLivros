@@ -9,11 +9,11 @@ namespace EmprestimoLivros.Controllers
         readonly private ApplicationDbContext _db;
         public EmprestimoController(ApplicationDbContext db) 
         { 
-            _db= db;
+            _db = db;
         }   
         public IActionResult Index()
         {
-            IEnumerable<EmprestimosModel> emprestimos = _db.Emprestimos;
+            IEnumerable<EmprestimosModel> emprestimos = _db.Emprestimos; //_db.Emprestimos se refere à tabela
             return View(emprestimos);
         }
     }
